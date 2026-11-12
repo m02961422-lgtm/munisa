@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="logo">COLLEGE <span>JOURNAL</span></div>
+
+        <nav class="menu">
+            <button class="active" onclick="showPage('dashboard',this)">▦ Dashboard</button>
+            <button onclick="showPage('students',this)">♙ Донишҷӯён</button>
+            <button onclick="showPage('grades',this)">★ Баҳоҳо</button>
+            <button onclick="showPage('attendance',this)">✓ Давомот</button>
+            <button onclick="showPage('rating',this)">🏆 Рейтинг</button>
+            <button onclick="showPage('schedule',this)">▤ Ҷадвали дарсӣ</button>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <h1 id="title">Dashboard</h1>
+            <div class="profile">🎓 Администратор</div>
+        </header>
+
+        <section id="dashboard" class="page">
+            <div class="stats">
+                <div class="card"><p>Ҳамагӣ донишҷӯён</p><h2>450</h2></div>
+                <div class="card"><p>Омӯзгорон</p><h2>32</h2></div>
+                <div class="card"><p>Фоизи давомот</p><h2>92%</h2></div>
+                <div class="card"><p>Баҳои миёна</p><h2>4.5</h2></div>
+            </div>
+        </section>
+
+        <section id="students" class="page hidden">
+            <div class="section">
+                <h2>Рӯйхати донишҷӯён</h2>
+                <input class="search" id="studentSearch"
+                placeholder="Ҷустуҷӯи донишҷӯ..."
+                oninput="searchStudents()">
+
+                <table id="studentTable">
+                    <tr><th>ID</th><th>Ном</th><th>Гурӯҳ</th><th>Телефон</th></tr>
+                    <tr><td>001</td><td>Муниса</td><td>IT-21</td><td>+992 XX XXX XX XX</td></tr>
+                    <tr><td>002</td><td>Алишер</td><td>IT-21</td><td>+992 XX XXX XX XX</td></tr>
+                    <tr><td>003</td><td>Фарид</td><td>IT-22</td><td>+992 XX XXX XX XX</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="grades" class="page hidden">
+            <div class="section">
+                <h2>Журнали баҳоҳо</h2>
+                <table>
+                    <tr><th>Ном</th><th>HTML</th><th>CSS</th><th>JS</th><th>Миёна</th></tr>
+                    <tr><td>Муниса</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+                    <tr><td>Алишер</td><td>5</td><td>4</td><td>5</td><td>4.7</td></tr>
+                    <tr><td>Фарид</td><td>3</td><td>4</td><td>4</td><td>3.7</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="attendance" class="page hidden">
+            <div class="section">
+                <h2>Давомоти донишҷӯён</h2>
+                <table>
+                    <tr><th>Ном</th><th>Гурӯҳ</th><th>Ҳозир</th><th>Ғоиб</th><th>Давомот</th></tr>
+                    <tr><td>Муниса</td><td>IT-21</td><td>20</td><td>0</td><td>100%</td></tr>
+                    <tr><td>Алишер</td><td>IT-21</td><td>19</td><td>1</td><td>95%</td></tr>
+                    <tr><td>Фарид</td><td>IT-22</td><td>16</td><td>4</td><td>80%</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="rating" class="page hidden">
+            <div class="section">
+                <h2>Рейтинги донишҷӯён</h2>
+                <table>
+                    <tr><th>Ҷой</th><th>Ном</th><th>Гурӯҳ</th><th>Хол</th></tr>
+                    <tr><td>🥇 1</td><td>Муниса</td><td>IT-21</td><td>100</td></tr>
+                    <tr><td>🥈 2</td><td>Алишер</td><td>IT-21</td><td>95</td></tr>
+                    <tr><td>🥉 3</td><td>Ситора</td><td>IT-22</td><td>90</td></tr>
+                </table>
+            </div>
+        </section>
